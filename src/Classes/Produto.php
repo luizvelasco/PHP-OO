@@ -7,11 +7,13 @@ class Produto
     public string $descricao = "Cerveja Brasileira";
     public float $preco;
 
-    function defineCodigoBarras($codigo) {
+    function defineCodigoBarras(string $codigo): void 
+    {
         $this->codigoBarras = $codigo;
     }
 
-    function acessaCodigoBarras() {
+    function acessaCodigoBarras(): void 
+    {
         echo $this->codigoBarras;
         echo "<br>";
     }
