@@ -2,6 +2,9 @@
 
 namespace App\Email;
 
+use Cliente;
+use stdClass;
+
 CONST VERSAO = 1.0;
 
 class Envio
@@ -11,7 +14,10 @@ class Envio
         $adaptador = new Adaptadores\Mailgun\Adaptador;
         $transporte = new Transporte;
 
-        var_dump($adaptador, $transporte);
+        $obj = new  \stdClass;
+        $cli = new Cliente;
+
+        var_dump($adaptador, $transporte, $obj, $cli);
     }    
 }
 
